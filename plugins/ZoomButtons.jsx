@@ -33,6 +33,7 @@ class ZoomButton extends React.Component {
         const tooltip = this.props.direction > 0 ? LocaleUtils.tr("tooltip.zoomin") : LocaleUtils.tr("tooltip.zoomout");
         return (
             <button className="map-button"
+                name={this.props.direction > 0 ? "zoomin" : "zoomout"}
                 disabled={disabled}
                 onClick={() => this.props.changeZoomLevel(this.props.currentZoom + this.props.direction)}
                 style={{bottom: (5 + 4 * position) + 'em'}}

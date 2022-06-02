@@ -36,6 +36,7 @@ class TaskButton extends React.Component {
         const title = LocaleUtils.tr("appmenu.items." + this.props.task + (this.props.mode || ""));
         return (
             <button className={classes} onClick={this.buttonClicked}
+                name={"task-"+this.props.task}
                 title={title}
                 style={{bottom: (5 + 4 * this.props.position) + 'em'}}>
                 <Icon icon={this.props.icon} />
